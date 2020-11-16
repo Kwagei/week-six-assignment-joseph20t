@@ -1,0 +1,199 @@
+body {
+    background-color: black;
+}
+
+.container {
+    width: 50%;
+    height: 80vh;
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 5%;
+    position: absolute;
+}
+
+#mainContent {
+    width: 96%;
+    height: 78vh;
+    background-color: lightgreen;
+    margin-left: 2%;
+    margin-top: 1%;
+    position: absolute;
+}
+
+#gameReset {
+    text-align: center;
+    margin-left: 60%;
+}
+
+.content {
+    width: 85%;
+    height: 63vh;
+    background-color: seagreen;
+    margin-left: 8%;
+    position: absolute;
+}
+
+#informationOnHowToPlay {
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}
+
+#playerOneBnt {
+    width: 20%;
+    height: 5vh;
+    background-color: blue;
+    color: white;
+    margin-left: 27%;
+    margin-top: 35%;
+}
+
+#playerTwoBnt {
+    width: 20%;
+    height: 5vh;
+    margin-left: 4%;
+    background-color: blue;
+    color: white;
+}
+
+#mainContentTwo {
+    width: 96%;
+    height: 78vh;
+    background-color: lightgreen;
+    margin-left: 2%;
+    margin-top: 1%;
+    position: absolute;
+    display: none;
+}
+
+.displax0r0Contentntent {
+    width: 50%;
+    height: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.xContent {
+    width: 35%;
+    height: 9vh;
+    color: white;
+    margin-top: 15%;
+    margin-left: 12%;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 10%;
+    border: white 2px solid;
+}
+
+.zeroContent {
+    width: 35%;
+    height: 9vh;
+    color: white;
+    margin-top: 15%;
+    margin-left: 8%;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10%;
+    border: white 2px solid;
+}
+
+#backBtn {
+    width: 10%;
+    height: 5vh;
+    margin-left: 45%;
+    margin-top: 5%;
+    background-color: blue;
+    color: white;
+}
+
+#mainContentThree {
+    width: 93%;
+    height: 78vh;
+    background-color: lightgreen;
+    margin-left: 2%;
+    margin-top: 1%;
+    position: absolute;
+    display: none; 
+}
+
+#bothPlayerScore {
+    display: flex;
+}
+
+#playerOneScore {
+    margin-left: 12%;
+    color: white;
+}
+
+#computerScore {
+    margin-left: 25%;
+    color: white;
+}
+
+.gameBoxesContainer {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    border: white 1px solid;
+    height: 53vh;    
+}
+
+#box1 {
+    height: 23vh;
+    background-color: seagreen;
+    border: white 1px solid;
+}
+
+#box2 {
+    height: 23vh;
+    background-color: seagreen;
+    border: white 1px solid;
+}
+
+#box3 {
+    height: 23vh;
+    background-color: seagreen;
+    border: white 1px solid;
+}
+
+#box4 {
+    height: 23vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+#box5 {
+    height: 23vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+#box6 {
+    height: 23vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+#box7 {
+    height: 18vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+#box8 {
+    height: 18vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+#box9 {
+    height: 18vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}

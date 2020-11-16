@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Taco-Toe game </title>
+    <link rel="stylesheet" href="../week-six-assignment-joseph20t/css/index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="mainContent">
+            <header>
+                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+            </header>
+            <div class="content">
+                <header>
+                    <h2 id="informationOnHowToPlay">How do you want to play?</h2>
+                </header>
+
+                <button onclick = "chooseWeapon()" id="playerOneBnt">One Player</button>
+                <button onclick = "chooseWeapon()" id="playerTwoBnt">Two Players</button>
+            </div>
+        </div>
+
+        <div id="mainContentTwo">
+            <header>
+                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+            </header>
+            <div class="content">
+                <header>
+                    <h2 id="informationOnHowToPlay">Would you like to be X or 0?</h2>
+                </header>
+
+                <div class="displax0r0Contentntent">
+                    <div onclick = "chooseToPlay()" class="xContent">X</div>
+                    <div onclick = "chooseToPlay()" class="zeroContent">0</div>
+                </div>
+                <button onclick = "backToHome()" id="backBtn">Back</button>
+            </div>
+        </div>
+
+        <div id="mainContentThree">
+            <header>
+                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+            </header>
+            <div class="content">
+                <header id="bothPlayerScore">
+                    <h2 id="playerOneScore">Player1-0</h2>
+                    <h2 id="computerScore">Computer-0</h2>
+                </header>
+               
+                <div class="gameBoxesContainer">
+                    <div class="item" id ="box1"></div>
+                    <div class="item" id ="box2"></div>
+                    <div class="item"  id="box3"></div>
+                    <div class="item" id="box4"></div>
+                    <div class="item" id="box5"></div>
+                    <div class="item" id="box6"></div>
+                    <div class="item" id="box7"></div>
+                    <div class="item" id="box8"></div>
+                    <div class="item" id="box9"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="../week-six-assignment-joseph20t/js/script.js"></script>
+ 
+</body>
+</html>
