@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Taco-Toe game </title>
+    <title>Tic-Tac-Toe game </title>
     <link rel="stylesheet" href="../week-six-assignment-joseph20t/css/index.css">
 </head>
 <body>
@@ -33,8 +33,8 @@
                 </header>
 
                 <div class="displax0r0Contentntent">
-                    <div onclick = "chooseToPlay()" class="xContent">X</div>
-                    <div onclick = "chooseToPlay()" class="zeroContent">0</div>
+                    <button onclick = "chooseToPlay()" class="xContent">X</button>
+                    <button onclick = "chooseToPlay()" class="zeroContent">0</button>
                 </div>
                 <button onclick = "backToHome()" id="backBtn">Back</button>
             </div>
@@ -44,9 +44,11 @@
             <header>
                 <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
             </header>
+
             <div class="content">
                 <header id="bothPlayerScore">
                     <h2 id="playerOneScore">Player1-0</h2>
+                    <div id = "displayWinOrLoser"></div>
                     <h2 id="computerScore">Computer-0</h2>
                 </header>
                
@@ -61,7 +63,7 @@
                     <div class="item" id="box8"></div>
                     <div class="item" id="box9"></div>
                 </div>
-                
+                <button onclick = "backToHome()" id="backBtn1">Back</button>
             </div>
         </div>
 
