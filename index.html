@@ -11,12 +11,13 @@
     <div class="container">
         <div id="mainContent">
             <header>
-                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
             </header>
             <div class="content">
                 <header>
                     <h2 id="informationOnHowToPlay">How do you want to play?</h2>
                 </header>
+                
 
                 <button onclick = "chooseWeapon()" id="playerOneBnt">One Player</button>
                 <button onclick = "chooseWeapon()" id="playerTwoBnt">Two Players</button>
@@ -25,7 +26,7 @@
 
         <div id="mainContentTwo">
             <header>
-                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
             </header>
             <div class="content">
                 <header>
@@ -33,8 +34,8 @@
                 </header>
 
                 <div class="displax0r0Contentntent">
-                    <button onclick = "chooseToPlay()" class="xContent">X</button>
-                    <button onclick = "chooseToPlay()" class="zeroContent">0</button>
+                    <button onclick = "selectWeapon(event)" id="xContent">X</button>
+                    <button onclick = "selectWeapon(event)"id="zeroContent">0</button>
                 </div>
                 <button onclick = "backToHome()" id="backBtn">Back</button>
             </div>
@@ -42,14 +43,14 @@
 
         <div id="mainContentThree">
             <header>
-                <h3 onclick = "homeText()" id="gameReset">Reset All</h3>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
             </header>
 
             <div class="content">
                 <header id="bothPlayerScore">
-                    <h2 id="playerOneScore">Player1-0</h2>
+                    <h2 onclick="goodLook()" id="playerOneScore">Player1-0</h2>
                     <div id = "displayWinOrLoser"></div>
-                    <h2 id="computerScore">Computer-0</h2>
+                    <h2 onclick="goodLook()" id="computerScore">Computer-0</h2>
                 </header>
                
                 <div class="gameBoxesContainer">
@@ -63,7 +64,7 @@
                     <div class="item" id="box8"></div>
                     <div class="item" id="box9"></div>
                 </div>
-                <button onclick = "backToHome()" id="backBtn1">Back</button>
+                <button onclick = " homeText()" id="backBtn1">Try Again</button>
             </div>
         </div>
 
