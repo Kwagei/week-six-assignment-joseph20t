@@ -28,13 +28,17 @@ function selectWeapon(event) {
     chooseToPlay();
 }
 
+var x = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 
 var click = document.querySelectorAll(".item");
 Array.from(click).forEach(function(click){
 click.addEventListener("click", function(event){
     if(event.target.innerHTML === "") {
         event.target.innerHTML = human;
-        computerRanNum();
+      var j = x.indexOf(event.target).toString();
+      x.splice(event.target,1)
+      console.log(x)
+    computerRanNum();
    winningStage();
     }
    
@@ -44,15 +48,23 @@ click.addEventListener("click", function(event){
 
 
 function computerRanNum() {
-    var randomNumber = Math.floor(Math.random() * 8);
-
+    var randomNumber = Math.floor(Math.random() * 9);
+    var p;
     if(click[randomNumber].innerHTML === "") {
          click[randomNumber].innerHTML = computer;
+        p = x.indexOf(click);
+        x.splice(p,1);
+         console.log(x);
     }
 
     else {
 
-        computerRanNum();
+        if(x.length > 0) {
+            computerRanNum();
+           
+        }
+
+        
 
     }
 
@@ -74,61 +86,61 @@ function goodLook() {
 
 function winningStage() {
     if (click[0].innerHTML === human && click[1].innerHTML === human && click[2].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[3].innerHTML === human && click[4].innerHTML === human && click[5].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[6].innerHTML === human && click[7].innerHTML === human && click[8].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win";
+        gameWinnerOrLoser.innerHTML = "Human Win";
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[0].innerHTML === human && click[4].innerHTML === human && click[8].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
      else if(click[0].innerHTML === human && click[4].innerHTML === human && click[8].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[0].innerHTML === human && click[3].innerHTML === human && click[6].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[1].innerHTML === human && click[4].innerHTML === human && click[7].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[2].innerHTML === human && click[4].innerHTML === human && click[6].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
 
     else if(click[2].innerHTML === human && click[5].innerHTML === human && click[8].innerHTML === human) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Human Win"; 
          gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
          goodLook();
     }
 
     if(click[0].innerHTML === computer && click[1].innerHTML === computer && click[2].innerHTML === computer) {
-        gameWinnerOrLoser.innerHTML = "Player1 Win"; 
+        gameWinnerOrLoser.innerHTML = "Computer Win"; 
         gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
         goodLook();
     }
@@ -187,7 +199,7 @@ function winningStage() {
         if(gameTie === 9) {
             gameWinnerOrLoser.innerHTML ="game Tie";
             gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-
+            goodLook();
         }
     }
      
