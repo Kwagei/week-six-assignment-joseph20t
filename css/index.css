@@ -33,10 +33,38 @@ body {
     position: absolute;
 }
 
+#welcome_statement {
+    color: white;
+    text-align: center;
+}
+
+#displaying_game_instruction {
+    width: 25%;
+    height: 5vh;
+    background-color: blue;
+    color: white;
+    margin-left: 37%;   
+}
+
+.reading_how_to_play_game {
+    color: white;
+    margin-left: 15%;
+    display: none;
+}
+
+#close_hint {
+    color: white;
+    margin-left: 45%; 
+    background-color: blue;
+    width: 10%;
+    height: 5vh;
+    display: none;
+}
+
 #informationOnHowToPlay {
     color: white;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 #playerOneBnt {
@@ -45,7 +73,7 @@ body {
     background-color: blue;
     color: white;
     margin-left: 27%;
-    margin-top: 35%;
+    margin-top: 20%;
 }
 
 #playerTwoBnt {
@@ -110,7 +138,7 @@ body {
 }
 
 #backBtn1 {
-    width: 15%;
+    width: 20%;
     height: 4vh;
     margin-left: 43%;
     margin-top: 1%;
@@ -151,60 +179,60 @@ body {
     font-size: 110px; 
 }
 
-#box1 {
+.box1 {
     height: 23vh;
     background-color: seagreen;
     border: white 1px solid;
 }
 
-#box2 {
+.box2 {
     height: 23vh;
     background-color: seagreen;
     border: white 1px solid;
 }
 
-#box3 {
+.box3 {
     height: 23vh;
     background-color: seagreen;
     border: white 1px solid;
 }
 
-#box4 {
-    height: 23vh;
-    background-color: seagreen;
-    margin-top: -23%;
-    border: white 1px solid;
-}
-
-#box5 {
+.box4 {
     height: 23vh;
     background-color: seagreen;
     margin-top: -23%;
     border: white 1px solid;
 }
 
-#box6 {
+.box5 {
     height: 23vh;
     background-color: seagreen;
     margin-top: -23%;
     border: white 1px solid;
 }
 
-#box7 {
+.box6 {
+    height: 23vh;
+    background-color: seagreen;
+    margin-top: -23%;
+    border: white 1px solid;
+}
+
+.box7 {
     height: 18vh;
     background-color: seagreen;
     margin-top: -23%;
     border: white 1px solid;
 }
 
-#box8 {
+.box8 {
     height: 18vh;
     background-color: seagreen;
     margin-top: -23%;
     border: white 1px solid;
 }
 
-#box9 {
+.box9 {
     height: 18vh;
     background-color: seagreen;
     margin-top: -23%;

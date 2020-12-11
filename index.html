@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe game </title>
-    <link rel="stylesheet" href="../week-six-assignment-joseph20t/css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     
@@ -15,12 +15,22 @@
             </header>
             <div class="content">
                 <header>
+                    <h2 id="welcome_statement">Welcome To Tic-Tac-Toe Game</h2>
+                    <button onclick = "displaying_instruction()" id="displaying_game_instruction">Game Instruction</button>
+                    <p class="reading_how_to_play_game">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="reading_how_to_play_game">Assumenda sunt at dolorum libero doloribus reprehenderit</p> 
+                    <p class="reading_how_to_play_game">quasi accusamus vero deleniti magni, possimus porro unde</p>
+                    <p class="reading_how_to_play_game">in quisquam molestiae harum pariatur sequi animi.</p>
+                    <section>
+                        <button id="close_hint">Close</button>
+                    </section>
+                   
                     <h2 id="informationOnHowToPlay">How do you want to play?</h2>
                 </header>
                 
 
-                <button onclick = "chooseWeapon()" id="playerOneBnt">One Player</button>
-                <button onclick = "chooseWeapon()" id="playerTwoBnt">Two Players</button>
+                <button onclick = "chooseWeapon(event)" id="playerOneBnt">One Player</button>
+                <button onclick = "chooseWeapon(event)" id="playerTwoBnt">Two Players</button>
             </div>
         </div>
 
@@ -48,29 +58,29 @@
 
             <div class="content">
                 <header id="bothPlayerScore">
-                    <h2 onclick="goodLook()" id="playerOneScore">Player1-0</h2>
+                    <h2 onclick="keepingTrackOfScore()" id="playerOneScore">Player1- <span id = human_score>0</span></h2>
                     <div id = "displayWinOrLoser"></div>
-                    <h2 onclick="goodLook()" id="computerScore">Computer-0</h2>
+                    <h2 onclick="keepingTrackOfScore()" id="computerScore">Player2- <span id = computer_score>0</span></h2>
                 </header>
                
                 <div class="gameBoxesContainer">
-                    <div class="item" id ="box1"></div>
-                    <div class="item" id ="box2"></div>
-                    <div class="item"  id="box3"></div>
-                    <div class="item" id="box4"></div>
-                    <div class="item" id="box5"></div>
-                    <div class="item" id="box6"></div>
-                    <div class="item" id="box7"></div>
-                    <div class="item" id="box8"></div>
-                    <div class="item" id="box9"></div>
+                    <div class="item box1" onclick="player1(event)" id="1"></div>
+                    <div class="item box2" onclick="player1(event)" id="2"></div>
+                    <div class="item box3" onclick="player1(event)" id="3"></div>
+                    <div class="item box4" onclick="player1(event)" id="4"></div>
+                    <div class="item box5" onclick="player1(event)" id="5"></div>
+                    <div class="item box6" onclick="player1(event)" id="6"></div>
+                    <div class="item box7" onclick="player1(event)" id="7"></div>
+                    <div class="item box8" onclick="player1(event)" id="8"></div>
+                    <div class="item box9" onclick="player1(event)" id="9"></div>
                 </div>
-                <button onclick = " homeText()" id="backBtn1">Try Again</button>
+                <button onclick = "play_again_text_btn()" id="backBtn1">Play Again</button>
             </div>
         </div>
 
     </div>
     
-    <script src="../week-six-assignment-joseph20t/js/script.js"></script>
+    <script src="./js/script.js"></script>
  
 </body>
 </html>
