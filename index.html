@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe game </title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="mainContent">
+            <header>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
+            </header>
+            <div class="content">
+                <header>
+                    <h2 id="welcome_statement">Welcome To Tic-Tac-Toe Game</h2>
+                    <button onclick = "instructionDisplaying()" id="displayingGameInstruction">Game Instruction</button>
+                    <li class = "readingHowToPlayGame">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li class = "readingHowToPlayGame">Assumenda sunt at dolorum libero doloribus reprehenderit</li> 
+                    <li class = "readingHowToPlayGame">quasi accusamus vero deleniti magni, possimus porro unde</li>
+                    <li class = "readingHowToPlayGame">in quisquam molestiae harum pariatur sequi animi.</li>
+                   
+                    <h2 id="informationOnHowToPlay">How do you want to play?</h2>
+                </header>
+                
+
+                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerOneBtn">One Player</button>
+                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerTwoBtn">Two Player</button>
+
+                <section>
+                    <button onclick="backToGame()" id="close_hint">Close</button>
+                </section>
+            </div>
+        </div>
+
+        <div id="mainContentTwo">
+            <header>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
+            </header>
+            <div class="content">
+                <header>
+                    <h2 id="informationOnHowToPlay">Would you like to be X or 0?</h2>
+                </header>
+
+                <div class="displax0r0Contentntent">
+                    <button onclick = "selectedCharactor(event)" id="xContent">X</button>
+                    <button onclick = "selectedCharactor(event)"id="zeroContent">0</button>
+                </div>
+                <button onclick = "backToHome()" id="backBtn">Back</button>
+            </div>
+        </div>
+
+        <div id="mainContentThree">
+            <header>
+                <h3 onclick = "window.location.reload()" id="gameReset">Reset All</h3>
+            </header>
+
+            <div class="content">
+                <header id="bothPlayerScore">
+                    <h2 onclick="keepingTrackOfScore()" id="playerOneScore">Player1- <span id = human_score>0</span></h2>
+                    <div id = "displayWinOrLoser"></div>
+                    <h2 onclick="keepingTrackOfScore()" id="computerScore">Player2- <span id = computer_score>0</span></h2>
+                </header>
+               
+                <div class="gameBoxesContainer">
+                    <div class="item box1" onclick="player1(event)" id="1"></div>
+                    <div class="item box2" onclick="player1(event)" id="2"></div>
+                    <div class="item box3" onclick="player1(event)" id="3"></div>
+                    <div class="item box4" onclick="player1(event)" id="4"></div>
+                    <div class="item box5" onclick="player1(event)" id="5"></div>
+                    <div class="item box6" onclick="player1(event)" id="6"></div>
+                    <div class="item box7" onclick="player1(event)" id="7"></div>
+                    <div class="item box8" onclick="player1(event)" id="8"></div>
+                    <div class="item box9" onclick="player1(event)" id="9"></div>
+                </div>
+                <button onclick = "play_again_text_btn()" id="playAgainBtn">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="./js/script.js"></script>
+ 
+</body>
+</html>
