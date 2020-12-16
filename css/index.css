@@ -25,6 +25,8 @@ body {
     margin-left: 60%;
 }
 
+
+
 .content {
     width: 85%;
     height: 63vh;
@@ -38,7 +40,7 @@ body {
     text-align: center;
 }
 
-#displaying_game_instruction {
+#displayingGameInstruction {
     width: 25%;
     height: 5vh;
     background-color: blue;
@@ -46,7 +48,7 @@ body {
     margin-left: 37%;   
 }
 
-.reading_how_to_play_game {
+.readingHowToPlayGame {
     color: white;
     margin-left: 15%;
     display: none;
@@ -64,10 +66,10 @@ body {
 #informationOnHowToPlay {
     color: white;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
-#playerOneBnt {
+#playerOneBtn {
     width: 20%;
     height: 5vh;
     background-color: blue;
@@ -76,7 +78,7 @@ body {
     margin-top: 20%;
 }
 
-#playerTwoBnt {
+#playerTwoBtn {
     width: 20%;
     height: 5vh;
     margin-left: 4%;
@@ -137,10 +139,10 @@ body {
     color: white;
 }
 
-#backBtn1 {
+#playAgainBtn {
     width: 20%;
     height: 4vh;
-    margin-left: 43%;
+    margin-left: 40%;
     margin-top: 1%;
     background-color: blue;
     color: white;
@@ -237,4 +239,565 @@ body {
     background-color: seagreen;
     margin-top: -23%;
     border: white 1px solid;
+}
+
+@media screen and (max-width: 360px) {
+    #gameReset {
+        text-align: center;
+        margin-left: 40%;
+    }
+
+    #xContent {
+        width: 100%;
+        height: 9vh;
+        background-color: seagreen;
+        color: white;
+        margin-top: 15%;
+        margin-left: -5%;
+        text-align: center;
+        font-size: 35px;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+    
+    #zeroContent {
+        width: 100%;
+        height: 9vh;
+        color: white;
+        background-color: seagreen;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+
+    #backBtn {
+        width: 40%;
+        height: 5vh;
+        margin-left: 30%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+
+    #playerOneBtn {
+        width: 60%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 17%;
+        margin-top: 20%;
+    }
+
+    #playerTwoBtn {
+        width: 60%;
+        height: 5vh;
+        margin-left: 17%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+    
+    #displayingGameInstruction {
+        width: 80%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 10%; 
+        margin-top: 15px;  
+    }
+
+    #close_hint {
+        color: white;
+        margin-left: 30%; 
+        background-color: blue;
+        width: 40%;
+        height: 5vh;
+        display: none;
+    }
+
+    #welcome_statement {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #informationOnHowToPlay {
+        color: white;
+        text-align: center;
+        margin-top: 15%;
+        font-size: 15px;
+    }
+
+    #playerOneScore {
+        color: white;
+        font-size: 10px;
+    }
+    
+    #computerScore {
+        color: white;
+        font-size: 10px;
+    }
+    .box1 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box2 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box3 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box4 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box5 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box6 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box7 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box8 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box9 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    #playAgainBtn {
+        width: 60%;
+        height: 4vh;
+        margin-left: 20%;
+        margin-top: 30%;
+        background-color: blue;
+        color: white;
+    }
+
+    #displayWinOrLoser {
+        font-size: 100px;
+    }
+} 
+/* moble view from 411px */
+@media screen and (max-width: 411px) {
+    #gameReset {
+        text-align: center;
+        margin-left: 40%;
+    }
+
+    #xContent {
+        width: 100%;
+        height: 9vh;
+        background-color: seagreen;
+        color: white;
+        margin-top: 15%;
+        margin-left: -5%;
+        text-align: center;
+        font-size: 35px;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+    
+    #zeroContent {
+        width: 100%;
+        height: 9vh;
+        color: white;
+        background-color: seagreen;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+
+    #backBtn {
+        width: 40%;
+        height: 5vh;
+        margin-left: 30%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+
+    #playerOneBtn {
+        width: 60%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 17%;
+        margin-top: 20%;
+    }
+
+    #playerTwoBtn {
+        width: 60%;
+        height: 5vh;
+        margin-left: 17%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+    
+    #displayingGameInstruction {
+        width: 80%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 10%; 
+        margin-top: 19px;  
+    }
+
+    #close_hint {
+        color: white;
+        margin-left: 30%; 
+        background-color: blue;
+        width: 40%;
+        height: 5vh;
+        display: none;
+    }
+
+    #welcome_statement {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #informationOnHowToPlay {
+        color: white;
+        text-align: center;
+        margin-top: 15%;
+        font-size: 18px;
+    }
+
+    #playerOneScore {
+        color: white;
+        font-size: 12px;
+    }
+    
+    #computerScore {
+        color: white;
+        font-size: 12px;
+    }
+    .box1 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box2 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box3 {
+        height: 15vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box4 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box5 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box6 {
+        height: 15vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box7 {
+        height: 14vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box8 {
+        height: 14vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box9 {
+        height: 14vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    #playAgainBtn {
+        width: 60%;
+        height: 4vh;
+        margin-left: 20%;
+        margin-top: 30%;
+        background-color: blue;
+        color: white;
+    }
+
+    #displayWinOrLoser {
+        font-size: 100px;
+    }
+
+}
+
+/* moble view for 320 */
+@media screen and (max-width: 320px) {
+
+    #xContent {
+        width: 100%;
+        height: 9vh;
+        background-color: seagreen;
+        color: white;
+        margin-top: 15%;
+        margin-left: -5%;
+        text-align: center;
+        font-size: 35px;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+    
+    #zeroContent {
+        width: 100%;
+        height: 9vh;
+        color: white;
+        background-color: seagreen;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 3%;
+        border: white 2px solid;
+    }
+
+    #backBtn {
+        width: 40%;
+        height: 5vh;
+        margin-left: 30%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+
+    #playerOneBtn {
+        width: 70%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 16%;
+        margin-top: 20%;
+    }
+
+    #playerTwoBtn {
+        width: 70%;
+        height: 5vh;
+        margin-left: 16%;
+        margin-top: 5%;
+        background-color: blue;
+        color: white;
+    }
+    
+    #displayingGameInstruction {
+        width: 90%;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        margin-left: 5%; 
+        margin-top: 19px;  
+    }
+
+    #close_hint {
+        color: white;
+        margin-left: 30%; 
+        background-color: blue;
+        width: 40%;
+        height: 5vh;
+        display: none;
+    }
+
+    #welcome_statement {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #informationOnHowToPlay {
+        color: white;
+        text-align: center;
+        margin-top: 15%;
+        font-size: 18px;
+    }
+
+    #playerOneScore {
+        color: white;
+        font-size: 9px;
+    }
+    
+    #computerScore {
+        color: white;
+        font-size: 9px;
+    }
+    .box1 {
+        height: 14vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box2 {
+        height: 14vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box3 {
+        height: 14vh;
+        background-color: seagreen;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box4 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box5 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box6 {
+        height: 13vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box7 {
+        height: 12vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box8 {
+        height: 12vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .box9 {
+        height: 12vh;
+        background-color: seagreen;
+        margin-top: -23%;
+        border: white 1px solid;
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    #playAgainBtn {
+        width: 70%;
+        height: 4vh;
+        margin-left: 20%;
+        margin-top: 25%;
+        background-color: blue;
+        color: white;
+    }
 }

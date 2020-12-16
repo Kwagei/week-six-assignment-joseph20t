@@ -16,21 +16,22 @@
             <div class="content">
                 <header>
                     <h2 id="welcome_statement">Welcome To Tic-Tac-Toe Game</h2>
-                    <button onclick = "displaying_instruction()" id="displaying_game_instruction">Game Instruction</button>
-                    <p class="reading_how_to_play_game">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="reading_how_to_play_game">Assumenda sunt at dolorum libero doloribus reprehenderit</p> 
-                    <p class="reading_how_to_play_game">quasi accusamus vero deleniti magni, possimus porro unde</p>
-                    <p class="reading_how_to_play_game">in quisquam molestiae harum pariatur sequi animi.</p>
-                    <section>
-                        <button id="close_hint">Close</button>
-                    </section>
+                    <button onclick = "instructionDisplaying()" id="displayingGameInstruction">Game Instruction</button>
+                    <li class = "readingHowToPlayGame">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li class = "readingHowToPlayGame">Assumenda sunt at dolorum libero doloribus reprehenderit</li> 
+                    <li class = "readingHowToPlayGame">quasi accusamus vero deleniti magni, possimus porro unde</li>
+                    <li class = "readingHowToPlayGame">in quisquam molestiae harum pariatur sequi animi.</li>
                    
                     <h2 id="informationOnHowToPlay">How do you want to play?</h2>
                 </header>
                 
 
-                <button onclick = "chooseWeapon(event)" id="playerOneBnt">One Player</button>
-                <button onclick = "chooseWeapon(event)" id="playerTwoBnt">Two Players</button>
+                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerOneBtn">One Player</button>
+                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerTwoBtn">Two Player</button>
+
+                <section>
+                    <button onclick="backToGame()" id="close_hint">Close</button>
+                </section>
             </div>
         </div>
 
@@ -44,8 +45,8 @@
                 </header>
 
                 <div class="displax0r0Contentntent">
-                    <button onclick = "selectWeapon(event)" id="xContent">X</button>
-                    <button onclick = "selectWeapon(event)"id="zeroContent">0</button>
+                    <button onclick = "selectedCharactor(event)" id="xContent">X</button>
+                    <button onclick = "selectedCharactor(event)"id="zeroContent">0</button>
                 </div>
                 <button onclick = "backToHome()" id="backBtn">Back</button>
             </div>
@@ -74,7 +75,7 @@
                     <div class="item box8" onclick="player1(event)" id="8"></div>
                     <div class="item box9" onclick="player1(event)" id="9"></div>
                 </div>
-                <button onclick = "play_again_text_btn()" id="backBtn1">Play Again</button>
+                <button onclick = "play_again_text_btn()" id="playAgainBtn">Play Again</button>
             </div>
         </div>
 
