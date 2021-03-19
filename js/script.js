@@ -6,12 +6,15 @@ var human_score_keeping = 0;
 //var for keeping track of computer score
 var computer_score_keeping = 0;
 
+var draw_score_keeping = 0;
+
 var  gettingTheIndexOnClick = 0;
 var human;
 var computer;
 
 var human_score_count = document.getElementById("human_score");
 var computer_score_count = document.getElementById("computer_score");
+var draw_score_count = document.getElementById("draw_score");
 
 var select_checked_boxes = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 var click = document.querySelectorAll(".item");
@@ -19,19 +22,18 @@ var click = document.querySelectorAll(".item");
 var number_of_player = 1;
 // displaying game instruction to both player
 function instructionDisplaying(){
-    document.getElementsByClassName(".readingHowToPlayGame").style = "display: block"
+    document.getElementById("readingHowToPlayGame").style = "display: block"
     document.getElementById("informationOnHowToPlay").style = "display: none"
-    document.getElementById("close_hint").style = "display: block"
-    document.getElementById("playerTwoBtn").style = "display: none"
-    document.getElementById("playerOneBtn").style = "display: none"
+    document.getElementById("close_hint").style = "display: block";
+    document.getElementById("gameBtn").style = "display: none"
 }
 
 //closing game instructiion fnx
 function backToGame() {
+    document.getElementById("gameBtn").style = "display: block";
+    document.getElementById("readingHowToPlayGame").style = "display: none"
+    document.getElementById("informationOnHowToPlay").style = "display: grid"
     document.getElementById("close_hint").style = "display: none";
-    document.getElementById("informationOnHowToPlay").style = "display: block"
-    document.getElementById("playerTwoBtn").style = "display: block"
-    document.getElementById("playerOneBtn").style = "display: block"
 }
 
 //fnx responsible for selecting two player
@@ -68,7 +70,6 @@ function player1(event) {
     gettingTheIndexOnClick++;
     if(event.target.innerHTML === "" && winningStage() !== "win") {
         event.target.innerHTML = human;
-        console.log(event.target)
         winningStage();
         select_checked_boxes.splice(event.target,1);
         if(winningStage() !== "win") {
@@ -77,6 +78,12 @@ function player1(event) {
                 if(winningStage() === "win"){
                     computer_score_keeping++;
                     computer_score_count.innerHTML = computer_score_keeping;
+                }else {
+                    if(winningStage() === "Game Tie") {{
+                        draw_score_keeping++;
+                        draw_score_count.innerHTML = draw_score_keeping;
+                    }}
+                   
                 }
             }else {
                 if( gettingTheIndexOnClick % 2 === 0) {
@@ -85,6 +92,13 @@ function player1(event) {
                         computer_score_keeping++;
                         computer_score_count.innerHTML = computer_score_keeping;
                     }
+                    else {
+                        if(winningStage() === "Game Tie") {{
+                            draw_score_keeping++;
+                            draw_score_count.innerHTML = draw_score_keeping;
+                       }}
+                    }
+
                 }
             }
         }
@@ -122,66 +136,53 @@ function play_again_text_btn() {
     }
 }
 
-function keepingTrackOfScore() {
-    document.getElementById("playerOneScore").style = " margin-left: 5%; color: white;"
-    document.getElementById("computerScore").style = " margin-left: 5%; color: white;"
-}
-
 //winning possibility
 function winningStage() {
     //Human Wining Statement Block;
     if (click[0].innerHTML === human && click[1].innerHTML === human && click[2].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 9%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win";
     }
 
     else if(click[3].innerHTML === human && click[4].innerHTML === human && click[5].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
     else if(click[6].innerHTML === human && click[7].innerHTML === human && click[8].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN";
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
     else if(click[0].innerHTML === human && click[3].innerHTML === human && click[6].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
     else if(click[1].innerHTML === human && click[4].innerHTML === human && click[7].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
     else if(click[2].innerHTML === human && click[5].innerHTML === human && click[8].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
     else if(click[2].innerHTML === human && click[4].innerHTML === human && click[6].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
      else if(click[0].innerHTML === human && click[4].innerHTML === human && click[8].innerHTML === human) {
         gameWinnerOrLoser.innerHTML = "PLAYER1 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium;"
         return "win"
     }
 
@@ -189,57 +190,48 @@ function winningStage() {
 
     if(click[0].innerHTML === computer && click[1].innerHTML === computer && click[2].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
-        return "win"
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
     }
 
      else if(click[3].innerHTML === computer && click[4].innerHTML === computer && click[5].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }
 
      else if(click[6].innerHTML === computer && click[7].innerHTML === computer && click[8].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }
 
      else if(click[0].innerHTML === computer && click[3].innerHTML === computer && click[6].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }
 
     else if(click[1].innerHTML === computer && click[4].innerHTML === computer && click[7].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }
 
     else if(click[2].innerHTML === computer && click[5].innerHTML === computer && click[8].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 5px; font-size: medium"
         return "win"
     }
 
     else if(click[0].innerHTML === computer && click[4].innerHTML === computer && click[8].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }
 
     else if(click[2].innerHTML === computer && click[4].innerHTML === computer && click[6].innerHTML === computer) {
         gameWinnerOrLoser.innerHTML = "PLAYER2 WIN"; 
-        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 130%"
-        keepingTrackOfScore()
+        gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
         return "win"
     }else {
         var gameTie = 0;
@@ -250,9 +242,8 @@ function winningStage() {
         }
         if(gameTie === 9) {
             gameWinnerOrLoser.innerHTML ="Game Tie";
-            gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 25px; font-size: 140%"
-            keepingTrackOfScore()
-            return;
+            gameWinnerOrLoser.style = "color: white; margin-left: 10%; text-align: center; padding-top: 15px; font-size: medium"
+            return "Game Tie";
         }
     }
   

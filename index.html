@@ -17,20 +17,19 @@
                 <header>
                     <h2 id="welcome_statement">Welcome To Tic-Tac-Toe Game</h2>
                     <button onclick = "instructionDisplaying()" id="displayingGameInstruction">Game Instruction</button>
-                    <li class = "readingHowToPlayGame">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li class = "readingHowToPlayGame">Assumenda sunt at dolorum libero doloribus reprehenderit</li> 
-                    <li class = "readingHowToPlayGame">quasi accusamus vero deleniti magni, possimus porro unde</li>
-                    <li class = "readingHowToPlayGame">in quisquam molestiae harum pariatur sequi animi.</li>
-                   
+                    <section id="readingHowToPlayGame"> 
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Assumenda sunt at dolorum libero doloribus reprehenderit</li> 
+                    <li>quasi accusamus vero deleniti magni, possimus porro unde</li>
+                    <li>in quisquam molestiae harum pariatur sequi animi.</li>
+                    </section>
+                    <button onclick="backToGame()" id="close_hint">Close</button>
                     <h2 id="informationOnHowToPlay">How do you want to play?</h2>
                 </header>
-                
 
-                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerOneBtn">One Player</button>
-                <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerTwoBtn">Two Player</button>
-
-                <section>
-                    <button onclick="backToGame()" id="close_hint">Close</button>
+                <section id="gameBtn">
+                    <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerOneBtn">One Player</button>
+                    <button onclick = "chooseSingleOrTwoPlayer(event)" id="playerTwoBtn">Two Player</button>
                 </section>
             </div>
         </div>
@@ -62,6 +61,7 @@
                     <h2 onclick="keepingTrackOfScore()" id="playerOneScore">Player1- <span id = human_score>0</span></h2>
                     <div id = "displayWinOrLoser"></div>
                     <h2 onclick="keepingTrackOfScore()" id="computerScore">Player2- <span id = computer_score>0</span></h2>
+                    <h2 onclick="keepingTrackOfScore()" id="drawScore">PlayerDraw- <span id = draw_score>0</span></h2>
                 </header>
                
                 <div class="gameBoxesContainer">
@@ -74,11 +74,15 @@
                     <div class="item box7" onclick="player1(event)" id="7"></div>
                     <div class="item box8" onclick="player1(event)" id="8"></div>
                     <div class="item box9" onclick="player1(event)" id="9"></div>
+                   
                 </div>
                 <button onclick = "play_again_text_btn()" id="playAgainBtn">Play Again</button>
-            </div>
-        </div>
 
+                
+                
+            </div>
+            
+        </div>
     </div>
     
     <script src="./js/script.js"></script>

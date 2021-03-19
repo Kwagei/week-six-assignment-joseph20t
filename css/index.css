@@ -48,9 +48,9 @@ body {
     margin-left: 37%;   
 }
 
-.readingHowToPlayGame {
+#readingHowToPlayGame {
     color: white;
-    margin-left: 15%;
+    margin-left: 17%;
     display: none;
 }
 
@@ -142,7 +142,7 @@ body {
 #playAgainBtn {
     width: 20%;
     height: 4vh;
-    margin-left: 40%;
+    margin-left: 38%;
     margin-top: 1%;
     background-color: blue;
     color: white;
@@ -163,13 +163,19 @@ body {
 }
 
 #playerOneScore {
-    margin-left: 12%;
+    margin-left: 5%;
     color: white;
+    font-size: medium;
 }
-
-#computerScore {
-    margin-left: 20%;
+#drawScore {
     color: white;
+    margin-left: 5%;
+    font-size: medium;
+}
+#computerScore {
+    margin-left: 5%;
+    color: white;
+    font-size: medium;
 }
 
 .gameBoxesContainer {
@@ -240,6 +246,7 @@ body {
     margin-top: -23%;
     border: white 1px solid;
 }
+
 
 @media screen and (max-width: 360px) {
     #gameReset {
